@@ -103,7 +103,7 @@ h1 {
     animation: subtleHueWiggle 1.5s linear infinite;
 }
 
-.hover-text {
+a .hover-text {
     position: absolute;
     font-family: 'portal', sans-serif;
     font-size: 1.5em;
