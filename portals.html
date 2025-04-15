@@ -10,7 +10,7 @@
     <div class="portal-container">
         <div class="augment-container">
             <div class="stamen" id="stamen-augment" style="top: 33%; left: 22%; filter:hue-rotate(95deg);" data-target="augment">
-                <a class="hover-wrapper" href="/augment.html">
+                <a class="hover-wrapper" href="augment.html">
                     <img src="gradient.png" alt="gradient" class="hue-shift-img">
                     <div class="hover-text">
                         <h3>augment</h3>
@@ -20,7 +20,7 @@
         </div>
         <div class="release-container">
             <div class="stamen" id="stamen-release" style="top: 20%; left: 52%; filter:hue-rotate(302deg)" data-target="release">
-                <a class="hover-wrapper" href=/release.html>
+                <a class="hover-wrapper" href=release.html>
                     <img src="gradient.png" alt="gradient" class="hue-shift-img">
                     <div class="hover-text">
                         <h3>release</h3>
@@ -30,7 +30,7 @@
         </div>
         <div class="nurture-container">
             <div class="stamen" id="stamen-nurture" style="top: 58%; left: 64%; filter:hue-rotate(5deg)" data-target="nurture">
-                <a class="hover-wrapper" href="/nurture.html">
+                <a class="hover-wrapper" href="nurture.html">
                     <img src="gradient.png"  alt="gradient" class="hue-shift-img">
                     <div class="hover-text">
                         nurture
@@ -40,7 +40,7 @@
         </div>
         <div class="particle-container">
             <div class="stamen" id="stamen-particle" style="top: 62%; left: 25%; filter:hue-rotate(175deg)" data-target="particle">
-                <a class="hover-wrapper" href="/particle.html">
+                <a class="hover-wrapper" href="particle.html">
                     <img src="gradient.png" alt="gradient" class="hue-shift-img">
                     <div class="hover-text">
                         particle
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="stamen" id="stamen-home" style="top: 10%; left: 10%;" data-target="home"><a href="/index.html">home</a>
+    <div class="stamen" id="stamen-home" style="top: 10%; left: 10%;" data-target="home"><a href="index.html">home</a>
     </div>
 
     <!-- Reflection Spaces -->
@@ -82,63 +82,6 @@
         <h1>home</h1>
         <p>home</p>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const flowerAnimation = document.getElementById('flower-animation');
-            const landing = document.getElementById('landing');
-            const stamens = document.querySelectorAll('.stamen');
-            const reflectionSpaces = document.querySelectorAll('.reflection-space');
-            const backButtons = document.querySelectorAll('.back-button');
-            const aboutLink = document.getElementById('about-link');
-            const hoverWrappers = document.querySelectorAll('.hover-wrapper');
-            
-            // Make stamens visible after a delay
-            setTimeout(() => {
-                stamens.forEach(stamen => {
-                    stamen.style.opacity = '1';
-                });
-            }, 2000);
-            
-            // Image hover effect
-            hoverWrappers.forEach(wrapper => {
-                const hoverText = wrapper.querySelector('.hover-text');
-                
-                wrapper.addEventListener('mouseenter', function() {
-                    if (hoverText) hoverText.style.opacity = '1';
-                });
-                
-                wrapper.addEventListener('mouseleave', function() {
-                    if (hoverText) hoverText.style.opacity = '0.6';
-                });
-            });
-            
-            // Handle back buttons
-            backButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Hide all reflection spaces
-                    reflectionSpaces.forEach(space => {
-                        space.style.display = 'none';
-                    });
-                    
-                    // Reset flower animation
-                    flowerAnimation.style.transform = 'scale(1)';
-                    
-                });
-            });
-            
-            // Handle about link
-            aboutLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Hide landing page
-                landing.style.opacity = '0';
-                landing.style.pointerEvents = 'none';
-                
-                // Show about section
-                document.getElementById('about').style.display = 'flex';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
