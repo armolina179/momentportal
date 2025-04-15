@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment/Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="landing">
+            <div class="header">
+                <h2>ariel molina</h2>
+                <h2>ame 486</h2>
+            </div>
+            <h1>MOMENT<br>/ PORTAL</h1>
+            <div class="h3">
+                <h3><a href="#" id="about-link">about</a></h3>
+                <h3><a href="mailto:wmolina1@asu.edu" id="contact-link">contact</a></h3>
+            </div>
+            <div class="flower-container">
+                <a class="hover-wrapper" href="/portals.html">
+                    <img src="gradient.png" id="flower-animation" alt="gradient" class="hue-shift-img">
+                    <div class="hover-text">enter</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- About Section -->
+        <div id="about" class="reflection-space">
+            <button class="back-button">back</button>
+            <h1>about</h1><br>
+            <p>moment/portal is an experiment in shifting existing modes of digital interactions with ones that might foster new ways of thinking about time, specifically founded on the idea that each moment is a portal.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButtons = document.querySelectorAll('.back-button');
+            const aboutLink = document.getElementById('about-link');
+            const reflectionSpaces = document.querySelectorAll('.reflection-space');
+            const landing = document.getElementById('landing'); 
+    
+            // Handle back buttons
+            backButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Hide all reflection spaces
+                    reflectionSpaces.forEach(space => {
+                        space.style.display = 'none';
+                    });
+                    
+                    // Show landing page
+                    landing.style.opacity = '1';
+                    landing.style.pointerEvents = 'auto';
+                });
+            });
+    
+            // Handle about link
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                // Hide landing page
+                landing.style.opacity = '0';
+                landing.style.pointerEvents = 'none';
+    
+                // Show about section
+                document.getElementById('about').style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>

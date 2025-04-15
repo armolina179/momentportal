@@ -1,0 +1,175 @@
+/* Base Styles */
+@font-face {
+    font-family: 'moment';
+    src: url("fonts/Arial Nova/ArialNova-Bold.ttf");
+}
+
+@font-face {
+    font-family: moment-light;
+    src: url("fonts/Arial Nova/ArialNova.ttf");
+}
+
+@font-face {
+    font-family: 'portal'; 
+    src: url("fonts/Arial Nova/Times New Roman MT Condensed Regular.otf");
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'moment', sans-serif;
+    background-color: #f8f8f0;
+    color: #4b4240;
+}
+
+.portal-container img {
+    width: 400px;
+}
+
+/* Flower container */
+.flower-container {
+    width: 50%;
+    max-width: 800vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Hover wrapper and image */
+.hover-wrapper {
+    width: 100%;
+    position: absolute;
+    left: -2%;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hue-shift-img {
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: subtleHueWiggle 20s linear infinite;
+}
+
+.hue-shift-img:hover {
+    animation: subtleHueWiggle 1.5s linear infinite;
+}
+
+.hover-text {
+    position: absolute;
+    font-family: 'moment', sans-serif;
+    font-size: 1em;
+    letter-spacing: -1px;
+    color: #f8f8f0;
+    opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes subtleHueWiggle {
+    0% {
+        filter: hue-rotate(0deg) brightness(1);
+    }
+    50% {
+        filter: hue-rotate(90deg) brightness(1.2);
+    }
+    100% {
+        filter: hue-rotate(0deg) brightness(1);
+    }
+}
+
+/* Interactive hotspots for stamens */
+.stamen {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamen:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #4b4240;
+}
+
+/* Reflection Spaces */
+.reflection-space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; 
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: #f8f8f0;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #4b4240;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'moment', sans-serif;
+    color: #4b4240;
+}
+
+.back-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #4b4240;
+    text-decoration: none;
+}
+
+.h3 {
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: space-between; 
+    width: 80%;
+    overflow: visible;
+    margin-bottom: 0; 
+}
+
+.h3 h3 {
+    margin: 5px; 
+    padding: 3px 15px; 
+    border-radius: 35px;
+    transition: color .3s ease-in;
+    transition: background-color .3s ease-in;
+}
+
+.h3 h3:hover {
+    color: #fbfaec;
+    background-color: #4b4240;
+}
+
+.h3 a {
+    color: inherit;
+    text-decoration: none;
+}
