@@ -233,3 +233,34 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.overlay-text {
+    text-align: center;
+    font-size: 1.5rem;
+    pointer-events: none;
+    animation: fadeText 20s infinite;
+}
+
+
+@keyframes fadeText {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+  }
